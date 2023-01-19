@@ -43,12 +43,11 @@ public class OtpAuthenticationTest {
     @Test
     void duplicationIdExists(){
         //given
-        User newUser = new User(1L, "lejehwan", "1234");
         fakeRepository.register(new User(1L, "lejehwan", "1234"));
 
         //when
         //then
-        assertThatThrownBy(() -> userService.UserRegister(newUser))
+        assertThatThrownBy(() -> userService.UserRegister(new User(1L, "lejehwan", "1234")))
                 .isInstanceOf(DuplicationIdException.class)
                 .hasMessageContaining("이미 사용중인 ID 입니다.");
     }
@@ -67,12 +66,14 @@ public class OtpAuthenticationTest {
 
     }
 
+    @Disabled
     @DisplayName("TOTP 발급하기")
     @Test
     void totpIssueRegister(){
 
     }
 
+    @Disabled
     @DisplayName("HOTP 발급하기")
     @Test
     void hotpIssueRegister(){
@@ -86,18 +87,21 @@ public class OtpAuthenticationTest {
 
     }
 
+    @Disabled
     @DisplayName("otpId로 OTP 타입 확인하기")
     @Test
     void otpTypeCheck(){
 
     }
 
+    @Disabled
     @DisplayName("TOTP 인증 하기")
     @Test
     void totpAuthentication(){
 
     }
 
+    @Disabled
     @DisplayName("HOTP 인증 하기")
     @Test
     void hotpAuthentication(){
