@@ -26,8 +26,6 @@ import static org.mockito.Mockito.*;
  * TDD 연습 및 공부하기
  * feat.(OTP AUTHENTICATION)
  */
-
-// TODO HOTP, TOTP 분리하여 인증 하기
 @ExtendWith(MockitoExtension.class)
 public class OTPAuthenticationTest {
 
@@ -167,7 +165,7 @@ public class OTPAuthenticationTest {
         //given
         User newUser = new User(1L, "lejehwan", "1234");
         GoogleOTP newGoogleOTP = new GoogleOTP(1L, "secretKey", OTPType.HOTP);
-        newUser.setOtpId(1L);
+        newUser.setOtpId(newGoogleOTP.getId());
 
         //when
         when(hotpConfirmService.authorize(anyLong(), anyString())).thenReturn(true);
