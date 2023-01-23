@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8346ec57-14ce-4b09-b457-e6047e9b0d26" name="Changes" comment="domain 생성 &amp; 메모리에 저장 &amp; 사용자 아이디 중복 체크">
+    <list default="true" id="8346ec57-14ce-4b09-b457-e6047e9b0d26" name="Changes" comment="중복 ID 존재 시 예외 포함">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/DuplicationIdException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/DuplicationIdException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/UserRegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/UserRegisterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/OtpAuthenticationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OtpAuthenticationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/GoogleOTP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/GoogleOTP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/GoogleOTPRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/GoogleOTPRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/UserRegisterService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/OtpAuthenticationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OTPAuthenticationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +27,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="Enum" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -42,23 +47,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Facets",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propCompiler",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Gradle.OtpAuthenticationTest">
+}</component>
+  <component name="RunManager" selected="Gradle.OTPAuthenticationTest">
+    <configuration name="OTPAuthenticationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;OTPAuthenticationTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="OtpAuthenticationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -130,6 +158,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.OTPAuthenticationTest" />
         <item itemvalue="Gradle.OtpAuthenticationTest" />
         <item itemvalue="Gradle.OtpAuthenticationTest.duplicationIdExists" />
         <item itemvalue="Gradle.OtpAuthenticationTest.userRegister" />
@@ -147,7 +176,8 @@
       <workItem from="1674050439085" duration="1455000" />
       <workItem from="1674051902209" duration="1835000" />
       <workItem from="1674135855768" duration="1475000" />
-      <workItem from="1674137341403" duration="3551000" />
+      <workItem from="1674137341403" duration="3897000" />
+      <workItem from="1674440796663" duration="8825000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1674140227191</created>
@@ -163,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674140347738</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="중복 ID 존재 시 예외 포함">
+      <created>1674140921505</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674140921505</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +209,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="domain 생성 &amp; 메모리에 저장 &amp; 사용자 아이디 중복 체크" />
-    <option name="LAST_COMMIT_MESSAGE" value="domain 생성 &amp; 메모리에 저장 &amp; 사용자 아이디 중복 체크" />
+    <MESSAGE value="중복 ID 존재 시 예외 포함" />
+    <option name="LAST_COMMIT_MESSAGE" value="중복 ID 존재 시 예외 포함" />
   </component>
 </project>

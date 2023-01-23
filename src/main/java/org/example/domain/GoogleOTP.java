@@ -9,5 +9,5 @@ public class GoogleOTP {
 
     private Long id;
     private String otpKey;
-    private String otpType;
+    private OTPType otpType;
 }
