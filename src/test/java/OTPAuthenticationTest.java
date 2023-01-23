@@ -148,7 +148,7 @@ public class OTPAuthenticationTest {
         //given
         User newUser = new User(1L, "lejehwan", "1234");
         GoogleOTP newGoogleOTP = new GoogleOTP(1L, "secretKey", OTPType.TOTP);
-        newUser.setOtpId(1L);
+        newUser.setOtpId(newGoogleOTP.getId());
 
         //when
         when(otpConfirm.authorize(anyLong(), anyString())).thenReturn(true);

@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8346ec57-14ce-4b09-b457-e6047e9b0d26" name="Changes" comment="OTP 키 발급하기 &amp;&#10;Mockito를 사용하여 인증 모듈에 mocking 하여 테스트 하기">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="8346ec57-14ce-4b09-b457-e6047e9b0d26" name="Changes" comment="HOTP 인증하기 - 수정">
       <change beforePath="$PROJECT_DIR$/src/test/java/OTPAuthenticationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OTPAuthenticationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +170,7 @@
       <workItem from="1674051902209" duration="1835000" />
       <workItem from="1674135855768" duration="1475000" />
       <workItem from="1674137341403" duration="3897000" />
-      <workItem from="1674440796663" duration="9462000" />
+      <workItem from="1674440796663" duration="9512000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1674140227191</created>
@@ -201,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674450029852</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="HOTP 인증하기 - 수정">
+      <created>1674450641159</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674450641159</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +218,7 @@
     <MESSAGE value="domain 생성 &amp; 메모리에 저장 &amp; 사용자 아이디 중복 체크" />
     <MESSAGE value="중복 ID 존재 시 예외 포함" />
     <MESSAGE value="OTP 키 발급하기 &amp;&#10;Mockito를 사용하여 인증 모듈에 mocking 하여 테스트 하기" />
-    <option name="LAST_COMMIT_MESSAGE" value="OTP 키 발급하기 &amp;&#10;Mockito를 사용하여 인증 모듈에 mocking 하여 테스트 하기" />
+    <MESSAGE value="HOTP 인증하기 - 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="HOTP 인증하기 - 수정" />
   </component>
 </project>
